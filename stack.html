@@ -33,11 +33,12 @@
     <div class="container-fluid align-center" align="middle">
     <h2 style="color:blue"> Sandhya Nidigonda builds a Stack</h2>
     <input type="text" id="inp_val" name="inputElement" placeholder="Enter the Text">
-    <p> Press the button to create an new element of type div and then add it to the container.
+    <p> Press the button to create an new element.
     </p>
     <button id="push" onclick="makeNewDiv()" class="btn btn-dark">Push Value</button>
     <button id="pop" onclick="popItem()" class="btn btn-info">Pop Value</button>
-    <button id="zap" onclick="zap()" class="btn btn-secondary">Zap Value</button><br>
+    <button id="zap" onclick="zap()" class="btn btn-secondary">Zap Value</button>
+	<button id="zap" onclick="uniqueHandler()" class="btn btn-warning">Unique</button><br> 
     <br>
     <br>
 		<div class="flex-container" id="target">
@@ -81,6 +82,22 @@
                 }
 
             }
+        }
+    }
+
+	function uniqueHandler() {
+        let stack_values = document.getElementsByClassName('stack');
+        for (let i = 0; i < stack_values.length; i++) {
+            element1 = stack_values[i].innerHTML;
+            for (let j = i + 1; j < stack_values.length; j++) {
+                element2 = stack_values[j].innerHTML;
+                if (element1 == element2) {
+                    stack_values[j].remove();
+                    j--;
+                    i--;
+                }
+            }
+
         }
     }
 </script>
