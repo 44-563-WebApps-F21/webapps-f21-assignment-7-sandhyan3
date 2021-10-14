@@ -21,41 +21,81 @@
 <div class="containers">
   
   <div class="container row">
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="1" onclick="check(0)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="2" onclick="check(1)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="3" onclick="check(2)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="4" onclick="check(3)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="5" onclick="check(4)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="6" onclick="check(5)" height="200px" width="200px"></div>
   </div>
 </div>
 
 <div class="container row">
-  <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-  <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-  <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-  <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-  <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-  <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
+  <div class="col-sm-2"><img src="bush.jpg" id="7" onclick="check(6)" height="200px" width="200px"></div>
+  <div class="col-sm-2"><img src="bush.jpg" id="8" onclick="check(7)" height="200px" width="200px"></div>
+  <div class="col-sm-2"><img src="bush.jpg" id="9" onclick="check(8)" height="200px" width="200px"></div>
+  <div class="col-sm-2"><img src="bush.jpg" id="10" onclick="check(9)" height="200px" width="200px"></div>
+  <div class="col-sm-2"><img src="bush.jpg" id="11" onclick="check(10)" height="200px" width="200px"></div>
+  <div class="col-sm-2"><img src="bush.jpg" id="12" onclick="check(11)" height="200px" width="200px"></div>
   </div>
 
   <div class="container row">
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="13" onclick="check(12)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="14" onclick="check(13)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="15" onclick="check(14)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="16" onclick="check(15)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="17" onclick="check(16)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="18" onclick="check(17)" height="200px" width="200px"></div>
  </div>
 
  <div class="container row">
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
-    <div class="col-sm-2"><img src="bush.jpg" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="19" onclick="check(18)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="20" onclick="check(19)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="21" onclick="check(20)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="22" onclick="check(21)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="23" onclick="check(22)" height="200px" width="200px"></div>
+    <div class="col-sm-2"><img src="bush.jpg" id="24" onclick="check(23)" height="200px" width="200px"></div>
  </div>
 
+ <script>
+    var uniqueids=["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"];
+    var triesCount=0;
+    var animalLocation=13;
+  
+    function check(position){
+      if(animalLocation == position){
+        var uniqueids_changed = document.getElementById(uniqueids[position]);
+        uniqueids_changed.src = "bunny.jpg"
+        triesCount++
+      }
+      else{
+        var uniqueids_changed = document.getElementById(uniqueids[position])
+        uniqueids_changed.src = "plant.jpg"
+        triesCount++
+      }
+      document.getElementById("tries").innerHTML = "Number of tries are :" +triesCount
+      var distance_cal = distance(position, animalLocation)
+      document.getElementById("distance").innerHTML = "Distance from  new plant to animal Location :" + distance_cal
+      
+    }
+    function distance(pos1, pos2){
+    var arraypossition = [[0,1,2,3,4,5],[6,7,8,9,10,11],[12,13,14,15,16,17],[18,19,20,21,22,23]]
+    for(i=0;i<arraypossition.length;i++){
+      for(j=0;j<arraypossition[i].length;j++){
+        if(arraypossition[i][j] == pos1){
+          vertical1 = i;
+          horizontal1 = j;
+        }
+        if(arraypossition[i][j] == pos2){
+        vertical2 = i; 
+        horizontal2 = j;
+        }
+      }
+    }
+    return Math.max (Math.abs(vertical2-vertical1),Math.abs(horizontal2-horizontal1))
+  }
+
+  
+    </script>
 </body>
 </html>
