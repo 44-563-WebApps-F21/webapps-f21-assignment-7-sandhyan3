@@ -22,17 +22,18 @@
   
   
   <script> 
+  let a =3
     myTime = undefined;
     function recordReact(){
         myTime = Date.now();
         console.log(myTime);
     }
     function startTime(){
-        for(let i=0;i<=3;i++){
-            j=(3-i)*1000;
+        for(let i=0;i<=a;i++){
+            
             setTimeout(()=>{
                 document.getElementById("countdown").innerHTML=i;
-            },j)
+            },(a-i)*1000)
         }
         setTimeout(()=>{
             if(myTime==undefined){
@@ -44,7 +45,8 @@
                 document.getElementById("target").innerHTML="Time was "+escapedTime
                 myTime=undefined
             }
-        },3000)
+        },a*1000)
+        a=Math.round(Math.random()*(10-2) + 0);
     }
   </script>
 
